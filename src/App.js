@@ -7,8 +7,7 @@ function App() {
   const [result, setResult] = useState(null);
 
   const handleClick = (e) => {
-    console.log(e.target.innerText);
-    if(typeof(parseInt(e.target.innerText)) === 'number')
+    // console.log(e.target.innerText);
     setInputValue((prevValue)=> `${prevValue}${e.target.innerText}`);
   }
   const evaluate = (e) => {
