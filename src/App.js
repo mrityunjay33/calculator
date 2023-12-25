@@ -11,8 +11,11 @@ function App() {
     setInputValue((prevValue)=> `${prevValue}${e.target.innerText}`);
   }
   const evaluate = (e) => {
-    const res = eval(inputValue);
-    setResult(res);
+    if(inputValue === "") setResult('Error');
+    else{
+      const res = eval(inputValue);
+      setResult(res);
+    }
   }
 
   const handleClear = (e) => {
